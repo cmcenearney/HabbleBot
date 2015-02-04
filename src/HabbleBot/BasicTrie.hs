@@ -1,8 +1,4 @@
 module HabbleBot.BasicTrie where
-import Data.Maybe
-import qualified Data.Map as M
-
-module BasicTrie where
 
 import Data.Maybe
 import qualified Data.Map as M
