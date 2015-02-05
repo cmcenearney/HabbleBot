@@ -24,14 +24,18 @@ library
   -- other-extensions:    
   build-depends:       base >=4.7 && <4.8
                      , containers
-                     , dawg
+                     , hspec
+                     , directory
 
 
 test-suite spec
+  default-language:    Haskell2010
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Spec.hs
   build-depends:       base >=4.7 && <4.8
                      , hspec >= 1.3
                      , QuickCheck
+                     , directory
+                     , filepath
                      , HabbleBot

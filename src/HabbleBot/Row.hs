@@ -1,4 +1,4 @@
-module HabbleBot.All where
+module HabbleBot.Row where
 
 import qualified Data.Map as M
 

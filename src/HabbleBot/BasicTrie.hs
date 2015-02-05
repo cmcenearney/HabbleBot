@@ -6,7 +6,6 @@ import qualified Data.Map as M
 {-
 A simple trie
 -}
-
 data Trie = Leaf
           | Word (M.Map Char Trie)
           | Prefix (M.Map Char Trie) 

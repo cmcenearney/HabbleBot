@@ -5,7 +5,7 @@ import Test.Hspec
 import Test.QuickCheck
 import HabbleBot.BasicTrie 
 import Data.Char
- 
+import SpecHelper
 
 {-
 quickcheck zone
@@ -34,10 +34,8 @@ nonEmptyString = listOf1 anyChar
 asciiGen :: Gen Char
 asciiGen = arbitrary `suchThat` (\c -> isAlpha c && isAscii c)
 
-
 anyChar :: Gen Char
 anyChar = arbitrary
-
 
 fromListAllWordsArePresent :: [String] -> Bool
 fromListAllWordsArePresent words = all (\w -> isWord w t) words
