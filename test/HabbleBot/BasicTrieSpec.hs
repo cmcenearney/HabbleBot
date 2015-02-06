@@ -3,7 +3,6 @@ module HabbleBot.BasicTrieSpec  (main, spec) where
 import Data.List
 import Test.Hspec
 import Test.QuickCheck
-import HabbleBot.BasicTrie 
 import Data.Char
 import SpecHelper
 

@@ -1,29 +1,29 @@
 module SpecHelper
     ( module Test.Hspec
     , module HabbleBot.All
-    , module HabbleBot.BasicTrie
+    , parseChar, parseRow, parseBoard
     ) where
 
 import Test.Hspec
 import HabbleBot.All
-import HabbleBot.BasicTrie
-import qualified Data.Sequence as Seq
+import qualified Data.Vector as V
 
 
-emptyBoard      = parseBoard empty
-allAsBoard      = parseBoard allAs
-oneABoard       = parseBoard oneA
-twoWordsBoard   = parseBoard twoWords
-threeWordsBoard = parseBoard threeWords
-fourWordsBoard  = parseBoard fourWords
-fiveWordsBoard  = parseBoard fiveWords
-sixWordsBoard   = parseBoard sixWords
+emptyBoard       = parseBoard empty
+allAsBoard       = parseBoard allAs
+oneABoard        = parseBoard oneA
+twoWordsBoard    = parseBoard twoWords
+threeWordsBoard  = parseBoard threeWords
+fourWordsBoard   = parseBoard fourWords
+fiveWordsBoard   = parseBoard fiveWords
+sixWordsBoard    = parseBoard sixWords
+
 
 parseBoard :: String -> Board 
-parseBoard l = Seq.fromList $ map parseRow $ take 15 $ lines l
+parseBoard l = V.fromList $ map parseRow $ take 15 $ lines l
 
 parseRow :: String -> Row 
-parseRow s = Seq.fromList $ map parseChar $ filter (\c -> c /= ' ') $ take 29 s
+parseRow s = V.fromList $ map parseChar $ filter (\c -> c /= ' ') $ take 29 s
 
 parseChar :: Char -> Maybe Char
 parseChar '_' = Nothing

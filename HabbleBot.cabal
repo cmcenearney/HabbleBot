@@ -26,6 +26,7 @@ library
                      , containers
                      , hspec
                      , directory
+                     , vector
 
 
 test-suite spec
@@ -36,6 +37,8 @@ test-suite spec
   build-depends:       base >=4.7 && <4.8
                      , hspec >= 1.3
                      , QuickCheck
+                     , containers
                      , directory
                      , filepath
+                     , vector
                      , HabbleBot
